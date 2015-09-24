@@ -1,0 +1,318 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Lab2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="#ff000000">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="96dp"
+                android:layout_height="match_parent"
+                android:layout_row="4"
+                android:layout_column="4"
+                android:weightSum="1"
+                android:layout_gravity="left">
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/seekBar"
+                    android:layout_weight="0.17" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.17">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="   -"
+                        android:id="@+id/VolumeDecrease"
+                        android:layout_weight="1"
+                        android:textColor="#ff0bff1a" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="+"
+                        android:id="@+id/VolumeIncrease"
+                        android:layout_weight="1"
+                        android:textColor="#ff15ff15" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="677dp"
+                android:layout_height="match_parent"
+                android:layout_row="4"
+                android:layout_column="10"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom">
+
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Preset 1"
+                        android:id="@+id/Preset1"
+                        android:layout_weight="1"
+                        android:onClick="setStation"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Preset 2"
+                        android:id="@+id/Preset2"
+                        android:layout_weight="1"
+                        android:onClick="setStation"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Preset 3"
+                        android:id="@+id/Preset3"
+                        android:layout_weight="1"
+                        android:onClick="setStation"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Preset 4"
+                        android:id="@+id/Preset4"
+                        android:layout_weight="1"
+                        android:onClick="setStation"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Preset 5"
+                        android:id="@+id/Preset5"
+                        android:layout_weight="1"
+                        android:onClick="setStation"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Preset 6"
+                        android:id="@+id/Preset6"
+                        android:layout_weight="1"
+                        android:onClick="setStation"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="638dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="       Display"
+                    android:id="@+id/Display"
+                    android:layout_weight="0.44"
+                    android:textColor="#ff18ff0e"
+                    android:textSize="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="#ff285fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Small Text"
+                    android:id="@+id/textView" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Small Text"
+                        android:id="@+id/AMText"
+                        android:background="#ff285fff"
+                        android:layout_weight="0.22" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Small Text"
+                        android:background="#ff285fff"
+                        android:id="@+id/FMText"
+                        android:layout_weight="0.22" />
+                </LinearLayout>
+
+                <ToggleButton
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:text="New ToggleButton"
+                    android:id="@+id/Powerbutton"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.32"
+                    android:onClick="OnOffButton"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="115dp"
+                android:layout_height="match_parent"
+                android:layout_row="4"
+                android:layout_column="11"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="AM      FM"
+                    android:id="@+id/AMFMToggle"
+                    android:textColor="#ff17ff0b" />
+
+                <ToggleButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="New ToggleButton"
+                    android:id="@+id/ToggleRadio"
+                    android:layout_gravity="center"
+                    android:textOff="AM"
+                    android:textOn="FM"
+                    android:onClick="ToggleTuner"/>
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:id="@+id/incTuner"
+                    android:onClick="increaseTuner"/>
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:id="@+id/decTuner"
+                    android:onClick="decreaseTuner"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="    Tuner"
+                    android:id="@+id/TunerText"
+                    android:layout_weight="0.18"
+                    android:textColor="#ff0dff2b" />
+
+            </LinearLayout>
+
+        </GridLayout>
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#7f000000">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="568dp"
+                android:layout_height="match_parent"
+                android:layout_row="6"
+                android:layout_column="27"
+                android:layout_gravity="center_horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:weightSum="1">
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/PlayButton"
+                        android:src="@mipmap/play_button"
+                        android:layout_weight="0.17" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/Pausebutton"
+                        android:layout_weight="0.17"
+                        android:src="@mipmap/pause_button" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/StopButton"
+                        android:layout_weight="0.17"
+                        android:src="@mipmap/stop_button" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/ejectbutton"
+                        android:layout_weight="0.17"
+                        android:src="@mipmap/eject_button" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/SeekLeft"
+                        android:layout_weight="0.17"
+                        android:src="@mipmap/seek_left" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/SeekRight"
+                        android:layout_weight="0.17"
+                        android:src="@mipmap/seek_right" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="463dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="                                 CD Player"
+                    android:id="@+id/CDPlayer"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#ffffffff"
+                    android:layout_weight="0.08" />
+
+            </LinearLayout>
+        </GridLayout>
+    </LinearLayout>
+</RelativeLayout>
